@@ -12,8 +12,23 @@
   <img src="{{ url_for('static', filename='firstlogo.png') }}" class="icon" />
   <h3>Recipe Generator</h3>
   <form action="/" method="post">
-    <input type="text" name="ingredients" placeholder="Enter ingredients" required />
-    <input type="submit" value="Generate recipe" />
+      <select name ="Difficulty">
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+      </select>
+      <select name ="Difficulty">
+          <option value="Chinese">Chinese</option>
+          <option value="Korean">Korean</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Thai">Thai</option>
+          <option value="American">American</option>
+          <option value="Indian">Indian</option>
+          <option value="Mexican">Mexican</option>
+      </select>
+      <input type="number" name="numServing" placeholder="Enter Number of Servings" required />
+      <input type="text" name="ingredients" placeholder="Enter ingredients" required />
+      <input type="submit" value="Generate recipe" />
   </form>
   {% if result %}
   <pre>{{ result }}</pre>
